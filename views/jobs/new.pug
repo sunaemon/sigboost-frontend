@@ -1,0 +1,36 @@
+extends ../layout.pug
+
+block content
+  .jobs_new
+    h1 Data upload
+    p.balance projection of balance: #{user.balance} -> #{user.balance - price}
+    form(action='/jobs/', method='post', enctype='multipart/form-data')
+      table
+        tbody
+          tr
+            td Files to upload
+            td
+              input(type='file', name='max_patches', id='max_patches', multiple)
+          tr
+            td Top file
+            td
+              select(type='select', name='top', id='top')
+          if user.admin
+            tr
+              td Version
+              td
+                select(type='select', name='checkout_ref')
+                  option(value='refs/tags/v0.0.1') v0.0.1
+                  option(value='refs/remotes/origin/dev') dev
+                  option(value='refs/remotes/origin/master') master
+            tr
+              td Instance
+              td
+                select(type='select', name='instance')
+                  option(value='c4.large') c4.large
+                  option(value='c4.xlarge') c4.xlarge
+                  option(value='c4.2xlarge') c4.2xlarge
+          else
+            input(type='hidden', name='checkout_ref', value='refs/remotes/origin/master')
+            input(type='hidden', name='instance', value='c4.xlarge')
+      input.basic_button(type='submit')

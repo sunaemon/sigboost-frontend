@@ -1,0 +1,14 @@
+machine:
+  node:
+    version: 6.9.3
+
+dependencies:
+  pre:
+    - npm install -g istanbul codecov
+
+test:
+  pre:
+    - mkdir -p $CIRCLE_TEST_REPORTS/reports
+    - npm run lint -- --format=junit -o $CIRCLE_TEST_REPORTS/report/eslint.xml
+  post:
+    - codecov --token=a04b541a-a558-4b58-a692-7e29a7500d62

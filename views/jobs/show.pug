@@ -1,0 +1,13 @@
+extends ../layout.pug
+
+block content
+  .jobs_show
+    h1 Logs of the running job 
+    table(id='logs')
+      thead
+        tr
+          th date
+          th message
+      tbody
+    .basic_button(id='#download_link')
+      a(href='/jobs/download/' + job._id) download

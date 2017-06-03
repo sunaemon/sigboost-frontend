@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  .menu
+    if !user
+      .basic_button
+        a(href='/users/signup') signup
+      .basic_button
+        a(href='/users/signin') signin
+    else
+      .basic_button
+        a(href='/users/signout') signout
+      .basic_button
+        a(href=`/users/${user._id}`) account
+      .basic_button
+        a(href='/jobs/') jobs
+      if user.admin
+        .basic_button
+          a(href='/users/') accounts

@@ -1,0 +1,34 @@
+extends ../layout.pug
+
+block content
+  .jobs_index
+    h1 Running jobs
+    p.balance Your balance: #{user.balance}
+    .basic_button
+      a(href='/jobs/new') Create a new job
+    table
+      thead
+        tr
+          if user.admin
+            th user
+            th instance
+          th id
+          th start
+          th process time(s)
+          th price
+          th paid
+          th status
+      tbody
+        each job in jobs
+          tr
+            if user.admin
+              td
+                a(href=`/users/${job.user._id}`)= job.user.username
+              td= job.instance
+            td
+              a(href=`/jobs/${job._id}`)= job._id
+            td= job.start.toISOString()
+            td= (job.end - job.start) / 1000
+            td= job.price
+            td= job.paid
+            td= job.state

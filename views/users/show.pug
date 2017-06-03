@@ -1,0 +1,15 @@
+extends ../layout.pug
+
+block content
+  .users_show
+    h1 User detail
+    table
+      tbody
+        tr
+          td username:
+          td #{user.username}
+        tr
+          td balance:
+          td #{user.balance}
+    form(action='/users/charge', method='POST')
+      script.stripe-button(src='https://checkout.stripe.com/checkout.js', data-key='pk_test_LXe411C2yLfkVDECtMTUsMvP', data-amount='999', data-name='Demo Site', data-description='Widget', data-image='https://stripe.com/img/documentation/checkout/marketplace.png', data-locale='auto', data-currency='jpy')

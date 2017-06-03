@@ -1,0 +1,7 @@
+extends:
+  - '../.eslintrc.yml'
+plugins:
+  - 'mocha'
+rules:
+  node/no-unpublished-require:
+    - off

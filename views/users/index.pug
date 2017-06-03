@@ -1,0 +1,21 @@
+extends ../layout.pug
+
+block content
+  h1 Users
+  table
+    thead
+      tr
+        th id
+        th username
+        th balance
+        th active
+        th admin
+    tbody
+      each user in users
+        tr
+          td
+            a(href=`/users/${user._id}`)= user._id
+          td= user.username
+          td= user.balance
+          th= user.active
+          th= user.admin

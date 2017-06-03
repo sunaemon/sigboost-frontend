@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title sigboost HLS - #{title}
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/jquery/dist/jquery.js')
+    script(src='/notifyjs/dist/notify.js')
+    script(src='https://www.google.com/recaptcha/api.js')
+    script(src='/javascripts/exec.js')
+  body.clearfix
+    .main_card
+      header
+        .logo
+          a(href='/') top
+      .contents
+        block content
+      footer
+        ul
+          li
+            a(href='/info/tokushou') 特定商取引法に基づく表記
+          li.separator |
+          li
+            a(href='/info/shikinkessai') 資金決済法第13条基づく表記

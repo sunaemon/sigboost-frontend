@@ -1,0 +1,10 @@
+env:
+  es6: true
+  browser: true
+extends:
+  - '../../.eslintrc.yml'
+plugins:
+  - 'jquery'
+parserOptions:
+  ecmaVersion: 2017
+  impliedStrict: true

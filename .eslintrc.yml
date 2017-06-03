@@ -1,0 +1,119 @@
+env:
+  es6: true
+  node: true
+extends:
+  - 'eslint:recommended'
+  - 'plugin:node/recommended'
+plugins:
+  - 'node'
+parserOptions:
+  ecmaVersion: 2017
+  impliedStrict: true
+rules:
+  no-extra-parens:
+    - warn
+  no-unused-vars:
+    - error
+    - argsIgnorePattern: "^_"
+  no-console:
+    - off
+  eqeqeq:
+    - error
+    - smart
+  array-bracket-spacing:
+    - error
+  block-spacing:
+    - error
+  brace-style:
+    - error
+  comma-dangle:
+    - error
+  comma-spacing:
+    - error
+  comma-style:
+    - error
+  computed-property-spacing:
+    - error
+  consistent-this:
+    - error
+  eol-last:
+    - error
+  func-call-spacing:
+    - error
+  func-name-matching:
+    - error
+  key-spacing:
+    - error
+  keyword-spacing:
+    - error
+  indent:
+    - error
+    - 4
+  linebreak-style:
+    - error
+    - unix
+  lines-around-directive:
+    - error
+  no-tabs:
+    - error
+  no-trailing-spaces:
+    - error
+  no-whitespace-before-property:
+    - error
+  object-curly-spacing:
+    - error
+    - always
+  operator-assignment:
+    - error
+  operator-linebreak:
+    - error
+  quote-props:
+    - error
+    - as-needed
+  quotes:
+    - error
+    - single
+  semi:
+    - error
+    - always
+  semi-spacing:
+    - error
+  sort-vars:
+    - error
+  space-before-blocks:
+    - error
+  space-before-function-paren:
+    - error
+    - never
+  space-in-parens:
+    - error
+  space-infix-ops:
+    - error
+  space-unary-ops:
+    - error
+  template-tag-spacing:
+    - error
+  arrow-body-style:
+    - error
+    - as-needed
+  arrow-parens:
+    - error
+    - as-needed
+  arrow-spacing:
+    - error
+  sort-imports:
+    - error
+  generator-star-spacing:
+    - error
+  no-confusing-arrow:
+    - error
+  no-var:
+    - error
+  prefer-const:
+    - error
+  prefer-template:
+    - error
+  template-curly-spacing:
+    - error
+  yield-star-spacing:
+    - error

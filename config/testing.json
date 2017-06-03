@@ -1,0 +1,46 @@
+{
+  "session_secret": "hogehoge",
+  "mongodb": {
+    "url": "mongodb://localhost:27017/sigboost_webapp_test"
+  },
+  "log4js": {
+    "level": "ALL",
+    "configure": {
+      "appenders": [
+        {
+          "category": "system",
+          "type": "log4js-node-mongodb",
+          "connectionString": "mongodb://localhost:27017/sigboost_webapp_test"
+        },
+        {
+          "category": "access",
+          "type": "log4js-node-mongodb",
+          "connectionString": "mongodb://localhost:27017/sigboost_webapp_test"
+        },
+        {
+          "category": "error",
+          "type": "log4js-node-mongodb",
+          "connectionString": "mongodb://localhost:27017/sigboost_webapp_test"
+        }
+      ],
+      "replaceConsole": false
+    }
+  },
+  "recaptcha": {
+    "site_key": "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",
+    "secret_key": "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe"
+  },
+  "stripe": {
+    "public_key": "pk_test_LXe411C2yLfkVDECtMTUsMvP",
+    "secret_key": "sk_test_191jTRq1WQTYcQMDDW6Wsprj"
+  },
+  "key_file": "~/keys/hls_backend.pem",
+  "key_name": "hls_backend",
+  "user_name": "ubuntu",
+  "aws_region": "ap-northeast-1",
+  "ami_id": "ami-00356567",
+  "price": 10,
+  "ssh_program": "echo",
+  "python_program": "echo"
+}
+

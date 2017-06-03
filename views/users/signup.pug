@@ -1,0 +1,12 @@
+extends ../layout.pug
+
+block content
+  .users_signup
+    form(action='/users/signup', method='post')
+      p username
+      input.input_username(type='text', name='username', id='username')
+      p password
+      input.input_password(type='password', name='password', id='password')
+
+      .g-recaptcha(data-sitekey=recaptcha.site_key)
+      input.input_submit.basic_button(type='submit', value='signup')
